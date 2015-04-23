@@ -1,0 +1,167 @@
+# Query Builder
+
+- [Selects](#selects)
+- [Joins](#joins)
+- [Aggregates](#aggregates)
+- [Inserts](#inserts)
+- [Updates](#updates)
+- [Deletes](#deletes)
+
+## Selects
+
+##### Retrieving All Rows From A Table
+
+    $users = DB::table('users')->get();
+
+    foreach ($users as $user) {
+        var_dump($user->username);
+    }
+
+##### Retrieving A Single Row From A Table
+
+    $user = DB::table('users')->where('username', 'john')->first();
+
+    var_dump($user->username);
+
+##### Retrieving A Single Column From A Row
+
+    $username = DB::table('users')->where('username', 'john')->pluck('name');
+
+##### Specifying A Select Clause
+
+    $users = DB::table('users')->select('username', 'email')->get();
+
+    $users = DB::table('users')->distinct()->get();
+
+    $users = DB::table('users')->select('name as username')->get();
+
+##### Using Where Operators
+
+    $users = DB::table('users')->where('id', '>', 10)->get();
+
+##### Or Statements
+
+    $users = DB::table('users')
+                    ->where('id', '>', 10)
+                    ->orWhere('username', 'john')
+                    ->get();
+
+##### Using Where Between
+
+    $users = DB::table('users')
+                    ->whereBetween('id', array(1, 10))->get();
+
+##### Using Where In With An Array
+
+    $users = DB::table('users')
+                    ->whereIn('id', array(1, 2, 3))->get();
+
+    $users = DB::table('users')
+                    ->whereNotIn('id', array(1, 2, 3))->get();
+
+##### Using Where Null To Find Records With Unset Values
+
+    $users = DB::table('users')
+                    ->whereNull('display_name')->get();
+
+#####  Nested Wheres
+
+    DB::table('users')
+            ->where('username', '=', 'john')
+            ->orWhere(function($query) {
+                $query->where('id', '>', 10)
+                      ->where('status', '=', '1');
+            })
+            ->get();
+
+The query above will produce the following SQL:
+
+    select * from users where username = 'john' or (id > 10 and status = '1')
+
+##### Order By
+   
+    $users = DB::table('users')
+                    ->orderBy('joined', 'desc')
+                    ->get();
+
+##### Offset & Limit
+
+    $users = DB::table('users')->skip(10)->take(5)->get();
+
+## Joins
+
+The query builder may also be used to write join statements. Take a look at the following examples:
+
+##### Basic Join Statement
+
+    DB::table('users')
+            ->join('contacts', 'users.id', '=', 'contacts.user_id')
+            ->select('users.id', 'username')
+            ->get();
+
+##### Left Join Statement
+
+    DB::table('users')
+        ->leftJoin('roles', 'role_id', '=', 'posts.id')
+        ->get();
+
+## Aggregates
+
+The query builder also provides a variety of aggregate methods, such as `count`, `max`, `min`, `avg`, and `sum`.
+
+##### Using Aggregate Methods
+
+    $users = DB::table('users')->count();
+
+    $id = DB::table('users')->max('id');
+
+    $id = DB::table('users')->min('id');
+
+    $id = DB::table('users')->avg('id');
+
+    $id = DB::table('users')->sum('id');
+
+## Inserts
+
+##### Inserting Records Into A Table
+
+    DB::table('users')->insert(
+        array('email' => 'john@example.com', 'status' => 1)
+    );
+
+If the table has an auto-incrementing id, use insertGetId to insert a record and retrieve the id:
+
+##### Inserting Records Into A Table With An Auto-Incrementing ID
+
+    $id = DB::table('users')->insertGetId(
+        array('email' => 'john@example.com', 'status' => 1)
+    );
+
+##### Inserting Multiple Records Into A Table
+
+    DB::table('users')->insert(array(
+        array('email' => 'foo@example.com', 'status' => 1),
+        array('email' => 'bar@example.com', 'status' => 1),
+    ));
+
+## Updates
+
+##### Updating Records In A Table
+
+    DB::table('users')
+            ->where('id', 1)
+            ->update(array('username' => 'foo'));
+
+## Deletes
+
+##### Deleting Records In A Table
+
+    DB::table('users')->where('id', '<', 10)->delete();
+
+##### Deleting All Records From A Table
+
+    DB::table('users')->delete();
+
+##### Truncating A Table
+
+    DB::table('users')->truncate();
