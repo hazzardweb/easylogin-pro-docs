@@ -2,60 +2,60 @@
 
 EasyLogin Pro uses the following libraries and assets:
 
-## Laravel
+### Laravel
 [github.com/laravel/framework](https://github.com/laravel/framework) <br>
 Some of the classes and implementations are based on Laravel Framework (Container, Validation, Mail, Database, Events, Encryption)
 
-## Composer
+### Composer
 [getcomposer.org](https://getcomposer.org)
 
-## Password Compat
+### Password Compat
 [github.com/ircmaxell/password_compat](https://github.com/ircmaxell/password_compat)
 
-## Swift Mailer
+### Swift Mailer
 [swiftmailer.org](http://swiftmailer.org)
 
-## GuzzleHttp
+### GuzzleHttp
 [github.com/guzzle/guzzle](https://github.com/guzzle/guzzle)
 
-## PHPoAuthLib
+### PHPoAuthLib
 [github.com/Lusitanian/PHPoAuthLib](https://github.com/Lusitanian/PHPoAuthLib)
 
-## PHPoAuthUserData
+### PHPoAuthUserData
 [github.com/Oryzone/PHPoAuthUserData](https://github.com/Oryzone/PHPoAuthUserData) 
 
-## Whoops
+### Whoops
 [github.com/filp/whoops](https://github.com/filp/whoops) 
 
-## GeoPlugin
+### GeoPlugin
 [geoplugin.com](http://www.geoplugin.com)
 
-## reCAPTCHA PHP library
+### reCAPTCHA PHP library
 [developers.google.com/recaptcha](https://developers.google.com/recaptcha/docs/php) 
 
-## jQuery
+### jQuery
 [jquery.com](http://jquery.com)
 
-## Bootstrap
+### Bootstrap
 [getbootstrap.com](http://getbootstrap.com)
 
-## DataTables
+### DataTables
 [datatables.net](http://datatables.net)
 
-## Bootstrap Hover Dropdown
+### Bootstrap Hover Dropdown
 [cameronspear.com](http://cameronspear.com/blog/bootstrap-dropdown-on-hover-plugin)
 
-## Bootstrap Datepicker 
+### Bootstrap Datepicker 
 [eyecon.ro/bootstrap-datepicker](http://www.eyecon.ro/bootstrap-datepicker)
 
-## Jcrop
+### Jcrop
 [deepliquid.com/content/Jcrop.html](http://deepliquid.com/content/Jcrop.html)
 
-## Timeago
+### Timeago
 [http://timeago.yarp.com/](http://timeago.yarp.com)
 
-## Simple JavaScript Templating
+### Simple JavaScript Templating
 [ejohn.org](http://ejohn.org/blog/javascript-micro-templating)
 
-## FamFamFam Flags icons
+### FamFamFam Flags icons
 [famfamfam.com/lab/icons/flags](http://www.famfamfam.com/lab/icons/flags)

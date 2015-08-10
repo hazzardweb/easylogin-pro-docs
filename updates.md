@@ -1,30 +1,32 @@
 # Updates
 
 - [Git](#git)
-- [Upgrading To 1.2 From 1.1](#upgrading-to-12-from-11)
-- [Upgrading To 1.1 From 1.0](#upgrading-to-11-from-10)
+- [Upgrading To 1.2 From 1.1](#upgrading-to-12-from-1.1)
+- [Upgrading To 1.1 From 1.0](#upgrading-to-11-from-1.0)
 
 ## Git
 
-Each update for EasyLogin Pro will be available on CodeCanyon. However if you want to get the latest changes, before the update hits CodeCanyon, compare the versions and see exactly what files were changed, we have created a GitHub like app,  [git.hazzardweb.net](http://git.hazzardweb.net/).
+~~Each update for EasyLogin Pro will be available on CodeCanyon. However if you want to get the latest changes, before the update hits CodeCanyon, compare the versions and see exactly what files were changed, we have created a GitHub like app,  [git.hazzardweb.com](http://git.hazzardweb.com/).~~
 
-When you go there you'll be asked for a __Purchase Code__. This code can be found in your <a href="http://codecanyon.net/downloads" target="_blank">Downloads</a> list on CodeCanyon. Once you have the code you can log in.
+~~When you go there you'll be asked for a __Purchase Code__. This code can be found in your [Downloads](http://codecanyon.net/downloads) list on CodeCanyon. Once you have the code you can log in.~~
 
-<a href="http://i.imgur.com/wiMdI1W.png" target="_blank"><img src="http://i.imgur.com/wiMdI1W.png" width="400"></a>
+<!-- [<img src="http://i.imgur.com/wiMdI1W.png">](http://i.imgur.com/wiMdI1W.png) -->
 
-If you have any questions use the contact form on CodeCanyon or the e-mail <a href="mailto:hazzardweb@gmail.com" target="_blank">hazzardweb@gmail.com</a>.
+> Notice: Will be back soon.
+
+If you have any questions use the contact form on CodeCanyon or the e-mail [hazzardweb@gmail.com](mailto:hazzardweb@gmail.com).
 
 ## Upgrading To 1.2 From 1.1
 
-The full list of changes can be found here on [git.hazzardweb.net](http://git.hazzardweb.net/).
+<!-- The full list of changes can be found here on [git.hazzardweb.com](http://git.hazzardweb.com). -->
 
 The `1.2` upgrade consists mostly in some bug fixes (nothing related to security) and cleaning up few things. It also brings the new reCAPTCHA and few things here and there. 
 
-Since there are a lot of small changes a lot of files if you want to upgrade from `1.1.4` you'll have to go to [git.hazzardweb.net](http://git.hazzardweb.net), log in with your Purchase Code from CodeCanyon and then go to the __Commits__ tab scroll down, click on the __Older__ button until you find this commit *Fixed comment moderation option* made on 13/01/2015 21:52:23. From there go up and see what files have changed and change yours too. Also make sure to replace the `vendor` directory because all packages have been updated.
+Since there are a lot of small changes a lot of files if you want to upgrade from `1.1.4` you'll have to go to ~~[git.hazzardweb.com](http://git.hazzardweb.com)~~, log in with your Purchase Code from CodeCanyon and then go to the __Commits__ tab scroll down, click on the __Older__ button until you find this commit *Fixed comment moderation option* made on 13/01/2015 21:52:23. From there go up and see what files have changed and change yours too. Also make sure to replace the `vendor` directory because all packages have been updated.
   
 ## Upgrading To 1.1 From 1.0
 
-The full list of changes can be found here on [git.hazzardweb.net](http://git.hazzardweb.net/).
+<!-- The full list of changes can be found here on [git.hazzardweb.com](http://git.hazzardweb.com). -->
 
 The `1.1` update brings the comment system, some bug fixes (mostly for PHP<5.4) and some other changes. <br> If you don't want the comment system and you don't have any issues you don't have to upgrade.
 

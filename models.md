@@ -14,34 +14,43 @@ The Models are stored in the `app/models` directory. By default there are alread
 
 ##### Defining A Model
 
-    class User extends Model {
-        protected $table = 'users';
-    }
+```php
+class User extends Model {
+    protected $table = 'users';
+}
+```
 
 ##### Retrieving All Models
 
-    $users = User::all();
+```php
+$users = User::all();
+```
 
 ##### Retrieving A Record By Primary Key
-    
-    $user = User::find(1);
 
-    var_dump($user->username);
+```php    
+$user = User::find(1);
+
+var_dump($user->username);
+```
 
 > __Note:__ All methods available on the [query builder](queries.md) are also available when querying Models.
 
 ##### Querying Using Models
 
-    $users = User::where('id', '>', 10)->take(10)->get();
+```php
+$users = User::where('id', '>', 10)->take(10)->get();
 
-    foreach ($users as $user) {
-        var_dump($user-username);
-    }
+foreach ($users as $user) {
+    var_dump($user-username);
+}
+```
 
 ##### Model Aggregates
 
-    $count = User::where('id', '>', 10)->count();
-
+```php
+$count = User::where('id', '>', 10)->count();
+```
 
 ## Insert, Update, Delete
 
@@ -49,34 +58,44 @@ To create a new record in the database from a model, simply create a new model i
 
 ##### Saving A New Model
 
-    $user = new User;
+```php
+$user = new User;
 
-    $user->username = 'john';
+$user->username = 'john';
 
-    $user->save();
+$user->save();
+```
 
 To update a model, you may retrieve it, change an attribute, and use the `save` method:
 
 ##### Updating A Retrieved Model
 
-    $user = User::find(1);
+```php
+$user = User::find(1);
 
-    $user->email = 'john@foo.com';
+$user->email = 'john@foo.com';
 
-    $user->save();
+$user->save();
+```
 
 You may also run updates as queries against a set of models:
 
-    $affectedRows = User::where('id', '>', 10)->update(array('status' => 1));
+```php
+$affectedRows = User::where('id', '>', 10)->update(array('status' => 1));
+```
 
 To delete a model, simply call the `delete` method on the instance:
 
 ##### Deleting An Existing Model
 
-    $user = User::find(1);
+```php
+$user = User::find(1);
 
-    $user->delete();
+$user->delete();
+```
 
 Of course, you may also run a delete query on a set of models:
 
-    $affectedRows = User::where('id', '>', 10)->delete();
+```php
+$affectedRows = User::where('id', '>', 10)->delete();
+```

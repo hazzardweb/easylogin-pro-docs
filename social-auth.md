@@ -30,19 +30,21 @@ Social Authentication allows the users of your website to log in with their
 
 To enable them first open `app/config/auth.php` and add them to the `providers` array like this:
 
-    'providers' => array(
-        'facebook' => 'Facebook', 
-        'google'   => 'Google', 
-        'twitter'  => 'Twitter', 
-        'linkedin' => 'LinkedIn',
-        // 'microsoft' => 'Microsoft',
-        // 'instagram' => 'Instagram',
-        // 'github' => 'GitHub',
-        // 'yammer' => 'Yammer',
-        // 'foursquare' => 'Foursquare',
-        // 'soundcloud' => 'SoundCloud',
-        // 'vkontakte' => 'VK'
-    ),
+```php
+'providers' => array(
+    'facebook'      => 'Facebook', 
+    'google'        => 'Google', 
+    'twitter'       => 'Twitter', 
+    'linkedin'      => 'LinkedIn',
+    // 'microsoft'  => 'Microsoft',
+    // 'instagram'  => 'Instagram',
+    // 'github'     => 'GitHub',
+    // 'yammer'     => 'Yammer',
+    // 'foursquare' => 'Foursquare',
+    // 'soundcloud' => 'SoundCloud',
+    // 'vkontakte'  => 'VK'
+),
+```
 
 Next, you'll have to set the API keys. Open `app/config/services.php` and set the `id` and `secret` for each one. Follow the instructions below for each of the services.
 
@@ -60,10 +62,12 @@ Move to the __Status & Review__ tab and make the app public (or leave it like th
 
 Finaly go back to the __Settings__ tab and copy the __App ID__ and __App Secret__ to `app/config/services.php` under the `facebook` section like this:
 
-    'facebook' => array(
-        'id' => 'your-app-id',
-        'secret' => 'your-app-secret'
-    ),
+```php
+'facebook' => array(
+    'id'     => 'your-app-id',
+    'secret' => 'your-app-secret'
+),
+```
 
 ## Google
 
@@ -77,10 +81,12 @@ Select __Web application__, set the __Authorized JavaScript origins__ to your we
 
 Finaly copy the __CLIENT ID__ and __CLIENT SECRET__ to `app/config/services.php` under the `google` section like:
 
-    'google' => array(
-        'id' => 'your-client-id',
-        'secret' => 'your-client-secret'
-    ),
+```php
+'google' => array(
+    'id'     => 'your-client-id',
+    'secret' => 'your-client-secret'
+),
+```
 
 ## Twitter
 
@@ -90,10 +96,12 @@ Go to <a href="https://dev.twitter.com" target="_blank">Twitter Developers</a>, 
 
 Once the app is created go to the __API Keys__ tab and copy __API key__ and __API secret__ to `app/config/services.php` under the `twitter` section like this:
 
-    'twitter' => array(
-        'id' => 'your-api-key',
-        'secret' => 'your-api-secret'
-    ),
+```php
+'twitter' => array(
+    'id'     => 'your-api-key',
+    'secret' => 'your-api-secret'
+),
+```
 
 ## LinkedIn
 
@@ -105,10 +113,12 @@ Complete the required fields with information about the app, then for __Default 
 
 Once the app is created copy __API Key__ and __Secret Key__ to `app/config/services.php` under the `linkedin` section like this:
 
-    'linkedin' => array(
-        'id' => 'your-api-key',
-        'secret' => 'your-secret-key'
-    ),
+```php
+'linkedin' => array(
+    'id'     => 'your-api-key',
+    'secret' => 'your-secret-key'
+),
+```
 
 ## Microsoft
 
@@ -120,10 +130,12 @@ Once the app is created go to the __API Settings__ tab and set __Redirect URLs__
 
 Finaly go to the __App Settings__ tab and copy __Client ID__ and __Client secret__ to `app/config/services.php` under the `microsoft` section like this:
 
-    'microsoft' => array(
-        'id' => 'your-client-id',
-        'secret' => 'your-client-secret'
-    ),
+```php
+'microsoft' => array(
+    'id'     => 'your-client-id',
+    'secret' => 'your-client-secret'
+),
+```
 
 ## Instagram
 
@@ -131,10 +143,12 @@ Go to <a href="http://instagram.com/developer/clients/manage/" target="_blank">I
 
 Once the client is created copy __CLIENT ID__ and __CLIENT SECRET__ to `app/config/services.php` under the `instagram` section like this:
 
-    'instagram' => array(
-        'id' => 'your-client-id',
-        'secret' => 'your-client-secret'
-    ),
+```php
+'instagram' => array(
+    'id'     => 'your-client-id',
+    'secret' => 'your-client-secret'
+),
+```
 
 ## GitHub
 
@@ -142,10 +156,12 @@ Go to <a href="https://github.com/settings/applications" target="_blank">GitHub 
 
 Once the app is created copy __Client ID__ and __Client Secret__ to `app/config/services.php` under the `github` section like this:
 
-    'github' => array(
-        'id' => 'your-client-id',
-        'secret' => 'your-client-secret'
-    ),
+```php
+'github' => array(
+    'id'     => 'your-client-id',
+    'secret' => 'your-client-secret'
+),
+```
 
 ## Yammer
 
@@ -155,10 +171,12 @@ Next, click on the __Basic Info__ tab and set __Redirect URI__ to the url that p
 
 Finaly click on the app name and copy __Client ID__ and __Client secret__ to `app/config/services.php` under the `yammer` section like this:
 
-    'yammer' => array(
-        'id' => 'your-client-id',
-        'secret' => 'your-client-secret'
-    ),
+```php
+'yammer' => array(
+    'id'     => 'your-client-id',
+    'secret' => 'your-client-secret'
+),
+```
 
 ## Foursquare
 
@@ -168,10 +186,12 @@ Pick a Name, enter your Website url, and set __Redirect URI__ to the url that po
 
 Once the app is created copy __Client id__ and __Client secret__ to `app/config/services.php` under the `foursquare` section like this:
 
-    'foursquare' => array(
-        'id' => 'your-client-id',
-        'secret' => 'your-client-secret'
-    ),
+```php
+'foursquare' => array(
+    'id'     => 'your-client-id',
+    'secret' => 'your-client-secret'
+),
+```
 
 ## SoundCloud
 
@@ -181,10 +201,12 @@ Once the app is created enter your Website url, then set __Redirect URI__ to the
 
 Finaly copy __Client ID__ and __Client Secret__ to `app/config/services.php` under the `soundcloud` section like this:
 
-    'soundcloud' => array(
-        'id' => 'your-client-id',
-        'secret' => 'your-client-secret'
-    ),
+```php
+'soundcloud' => array(
+    'id'     => 'your-client-id',
+    'secret' => 'your-client-secret'
+),
+```
 
 ## VK
 
@@ -194,7 +216,9 @@ Once the app is created go to the __Settings__ tab and set __First API request__
 
 Finaly copy __Application ID__ and __Secure key__ to `app/config/services.php` under the `vkontakte` section like this:
 
-    'vkontakte' => array(
-        'id' => 'your-application-id',
-        'secret' => 'your-secure-key'
-    ),
+```php
+'vkontakte' => array(
+    'id'     => 'your-application-id',
+    'secret' => 'your-secure-key'
+),
+```

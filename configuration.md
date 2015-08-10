@@ -35,10 +35,12 @@ To enable Captcha first set the `captcha` option to `true` in  `app/config/auth.
 
 Once created click on the domain name and copy the __Site Key__ and __Secret Key__ to  `app/config/services.php` under the `recaptcha` section like this:
 
-    'recaptcha' => array(
-        'public_key'  => 'your-site-key',
-        'private_key' => 'your-secret-key'
-    ),
+```php
+'recaptcha' => array(
+    'public_key'  => 'your-site-key',
+    'private_key' => 'your-secret-key'
+),
+```
 
 ## Authentication
 The options for Authentication are stored in `app/config/auth.php`.
@@ -67,9 +69,11 @@ EasyLogin Pro allows you to change the script options without having to edit the
 
 To enable, open `app/init.php` and search for _Database Config Loader_, then uncomment the these lines:
 
-    $app->register('Hazzard\Database\DatabaseServiceProvider');
-    $loader->setConnection($app['db']);
-    $app->instance('config', new Config($loader));
+```php
+$app->register('Hazzard\Database\DatabaseServiceProvider');
+$loader->setConnection($app['db']);
+$app->instance('config', new Config($loader));
+```
 
 Now if you go to the Admin Panel `admin.php` you'll see a new section for Settings. Please note that in this documentation everything is referred to the file configuration, but since the name of the options are similar, there should not be a problem when changing the configuration from the Admin Panel. 
 
@@ -83,17 +87,19 @@ First of all if you have PHP < `5.3.7` you should consider upgrading. However, i
 
 Edit `src/Hazzard/Hashing/HashServiceProvider.php` and in the `register` method comment the first part and uncomment the last one like this:
 
-    public function register()
-    {
-        //$this->app->bindShared('hash', function($app) {
-        //    return new BcryptHasher;
-        //});
+```php
+public function register()
+{
+    //$this->app->bindShared('hash', function($app) {
+    //    return new BcryptHasher;
+    //});
 
-        // Use this if you don't have BCRYPT on your server.
-        $this->app->bindShared('hash', function($app) {
-            // "md5", "sha256", "haval160,4" etc.
-            return new BasicHasher('md5');
-        });
-    }
+    // Use this if you don't have BCRYPT on your server.
+    $this->app->bindShared('hash', function($app) {
+        // "md5", "sha256", "haval160,4" etc.
+        return new BasicHasher('md5');
+    });
+}
+```
 
->The `md5` password hasher is considered to be the weakest one. Use it at your own risks. 
+>Warning: The `md5` password hasher is considered to be the weakest one. Use it at your own risks. 

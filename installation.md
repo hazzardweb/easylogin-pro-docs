@@ -70,16 +70,20 @@ There are few tweaks you have to make for these examples:
 
 Edit `app/views/comments.php`, find this line
 
-    <!-- <?php _e('comments.logged_in', array('attrs' => 'href="login.php"')) ?> -->
+```php
+<!-- <?php _e('comments.logged_in', array('attrs' => 'href="login.php"')) ?> -->
+```
 
 remove the comments (`<!--` and `-->`), and make sure you comment the next line. 
 
 Then edit `app/views/header.php` find these lines:
 
-    <!--
-    <li><a href="login.php"><?php _e('main.login'); ?></a></li>
-    <li><a href="signup.php"><?php _e('main.signup'); ?></a></li>
-    -->
+```php
+<!--
+<li><a href="login.php"><?php _e('main.login'); ?></a></li>
+<li><a href="signup.php"><?php _e('main.signup'); ?></a></li>
+-->
+```
 
 and again remove the comments (`<!--` and `-->`) (and make sure you comment the next lines)
 
@@ -89,10 +93,14 @@ This will change the links to separate pages instead of using a modals.
 
 Edit `app/views/emails/activation.php` and uncomment this line:
 
-    // $url = App::url("#activate-{$reminder}");
+```php
+// $url = App::url("#activate-{$reminder}");
+```
 
 Edit `app/views/emails/reminder.php` and uncomment this line:
 
-    // $url = App::url("#reset-{$reminder}");
+```php
+// $url = App::url("#reset-{$reminder}");
+```
 
 This will change activation and password reminder the links to modals.

@@ -13,42 +13,51 @@ __Note:__ This is the <a href="http://bit.ly/1yhF4Tz" target="_blank">Validation
 
 #### Basic Validation Example
 
-    $validator = Validator::make(
-        array('username' => 'dayle'),
-        array('username' => 'required|alpha_dash|min:3')
-    );
+```php
+$validator = Validator::make(
+    array('username' => 'dayle'),
+    array('username' => 'required|alpha_dash|min:3')
+);
+```
 
 The first argument passed to the `make` method is the data under validation. The second argument is the validation rules that should be applied to the data.
 
 #### Validating Multiple Fields
 
-    $validator = Validator::make(
-        array(
-            'username' => 'dayle',
-            'password' => 'mypassword',
-            'email' => 'email@example.com'
-        ),
-        array(
-            'name' => 'required',
-            'password' => 'required|between:4,30',
-            'email' => 'required|email|unique:users'
-        )
-    );
+```
+$validator = Validator::make(
+    array(
+        'username' => 'dayle',
+        'password' => 'mypassword',
+        'email' => 'email@example.com'
+    ),
+    array(
+        'name' => 'required',
+        'password' => 'required|between:4,30',
+        'email' => 'required|email|unique:users'
+    )
+);
+```
 
 Once a `Validator` instance has been created, the `fails` (or `passes`) method may be used to perform the validation.
 
-    if ($validator->fails())
-    {
-        // The given data did not pass validation
-    }
+```php
+if ($validator->fails()) {
+    // The given data did not pass validation
+}
+```
 
 If validation has failed, you may retrieve the error messages from the validator.
 
-    $messages = $validator->messages(); 
+```php
+$messages = $validator->messages(); 
+```
 
 You may also access an array of the failed validation rules, without messages. To do so, use the `failed` method:
 
-    $failed = $validator->failed();
+```php
+$failed = $validator->failed();
+```
 
 ## Working With Error Messages
 
@@ -56,39 +65,47 @@ After calling the `messages` method on a `Validator` instance, you will receive 
 
 #### Retrieving The First Error Message For A Field
 
-    echo $messages->first('email');
+```php
+echo $messages->first('email');
+```
 
 #### Retrieving All Error Messages For A Field
 
-    foreach ($messages->get('email') as $message)
-    {
-        //
-    }
+```php
+foreach ($messages->get('email') as $message) {
+    //
+}
+```
 
 #### Retrieving All Error Messages For All Fields
 
-    foreach ($messages->all() as $message)
-    {
-        //
-    }
+```php
+foreach ($messages->all() as $message) {
+    //
+}
+```
 
 #### Determining If Messages Exist For A Field
 
-    if ($messages->has('email'))
-    {
-        //
-    }
+```php
+if ($messages->has('email')) {
+    //
+}
+```
 
 #### Retrieving An Error Message With A Format
 
-    echo $messages->first('email', '<p>:message</p>');
+```php
+echo $messages->first('email', '<p>:message</p>');
+```
 
 #### Retrieving All Error Messages With A Format
 
-    foreach ($messages->all('<li>:message</li>') as $message)
-    {
-        //
-    }
+```php
+foreach ($messages->all('<li>:message</li>') as $message) {
+    //
+}
+```
 
 ## Available Validation Rules
 
@@ -207,19 +224,27 @@ The field under validation must exist on a given database table.
 
 #### Basic Usage Of Exists Rule
 
-    'email' => 'exists:users'
+```php
+'email' => 'exists:users'
+```
 
 #### Specifying A Custom Column Name
 
-    'email' => 'exists:users,email_address'
+```php
+'email' => 'exists:users,email_address'
+```
 
 You may also specify more conditions that will be added as "where" clauses to the query:
 
-    'email' => 'exists:users,email,id,1'
+```php
+'email' => 'exists:users,email,id,1'
+```
 
 Passing `NULL` as a "where" clause value will add a check for a `NULL` database value:
 
-    'email' => 'exists:users,email,display_name,NULL'
+```php
+'email' => 'exists:users,email,display_name,NULL'
+```
 
 #### image
 
@@ -301,21 +326,29 @@ The field under validation must be unique on a given database table. If the `col
 
 #### Basic Usage Of Unique Rule
 
-    'email' => 'unique:users'
+```php
+'email' => 'unique:users'
+```
 
 #### Specifying A Custom Column Name
 
-    'email' => 'unique:users,email_address'
+```php
+'email' => 'unique:users,email_address'
+```
 
 #### Forcing A Unique Rule To Ignore A Given ID
 
-    'email' => 'unique:users,email_address,10'
+```php
+'email' => 'unique:users,email_address,10'
+```
 
 #### Adding Additional Where Clauses
 
 You may also specify more conditions that will be added as "where" clauses to the query:
 
-    'email' => 'unique:users,email_address,NULL,id,account_id,1'
+```php
+'email' => 'unique:users,email_address,NULL,id,account_id,1'
+```
 
 In the rule above, only rows with an `account_id` of `1` would be included in the unique check.
 
@@ -329,40 +362,48 @@ If needed, you may use custom error messages for validation instead of the defau
 
 #### Passing Custom Messages Into Validator
 
-    $messages = array(
-        'required' => 'The :attribute field is required.',
-    );
+```php
+$messages = array(
+    'required' => 'The :attribute field is required.',
+);
 
-    $validator = Validator::make($input, $rules, $messages);
+$validator = Validator::make($input, $rules, $messages);
+```
 
-> *Note:* The `:attribute` place-holder will be replaced by the actual name of the field under validation. You may also utilize other place-holders in validation messages.
+> Notice: The `:attribute` place-holder will be replaced by the actual name of the field under validation. You may also utilize other place-holders in validation messages.
 
 #### Other Validation Place-Holders
 
-    $messages = array(
-        'same'    => 'The :attribute and :other must match.',
-        'size'    => 'The :attribute must be exactly :size.',
-        'between' => 'The :attribute must be between :min - :max.',
-        'in'      => 'The :attribute must be one of the following types: :values',
-    );
+```php
+$messages = array(
+    'same'    => 'The :attribute and :other must match.',
+    'size'    => 'The :attribute must be exactly :size.',
+    'between' => 'The :attribute must be between :min - :max.',
+    'in'      => 'The :attribute must be one of the following types: :values',
+);
+```
 
 #### Specifying A Custom Message For A Given Attribute
 
 Sometimes you may wish to specify a custom error messages only for a specific field:
 
-    $messages = array(
-        'email.required' => 'We need to know your e-mail address!',
-    );
+```php
+$messages = array(
+    'email.required' => 'We need to know your e-mail address!',
+);
+```
 
 #### Specifying Custom Messages In Language Files
 
 In some cases, you may wish to specify your custom messages in a language file instead of passing them directly to the `Validator`. To do so, add your messages to `custom` array in the `app/lang/xx/validation.php` language file.
 
-    'custom' => array(
-        'email' => array(
-            'required' => 'We need to know your e-mail address!',
-        ),
+```php
+'custom' => array(
+    'email' => array(
+        'required' => 'We need to know your e-mail address!',
     ),
+),
+```
 
 ## Custom Validation Rules
 
@@ -370,9 +411,11 @@ In some cases, you may wish to specify your custom messages in a language file i
 
 To specify some custom validation rules use the `Validator::extend` method:
 
-    Validator::extend('foo', function($attribute, $value, $parameters)
-    {
-        return $value == 'foo';
-    });
+```php
+Validator::extend('foo', function($attribute, $value, $parameters)
+{
+    return $value == 'foo';
+});
+```
 
 The custom validator Closure receives three arguments: the name of the `$attribute` being validated, the `$value` of the attribute, and an array of `$parameters` passed to the rule.

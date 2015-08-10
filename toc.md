@@ -24,11 +24,12 @@
     - [Validation](validation.md)
     - [Session](session.md)
     - [Cookie](cookie.md)
-    - [Debugging](debugging.md)
 
 - Database
     - [Basic Usage](database.md)
     - [Query Builder](queries.md)
     - [Models](models.md)
 
-- [Sources and Credits](credits.md)
+-
+    - [Debugging](debugging.md)
+    - [Credits](credits.md)

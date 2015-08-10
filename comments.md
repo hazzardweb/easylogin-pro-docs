@@ -18,31 +18,39 @@ To enable the smilies set `'use_smilies' => true`. You have to also define the s
 
 Comments containing these words will require moderator approval before being published.
 
-    'restricted_words' => array('badword1', 'badword2'),
+```php
+'restricted_words' => array('badword1', 'badword2'),
+```
 
 #### Blacklist and Whitelist
 
 Using the `blacklist` option you can define a list of user IDs that will not be able the post comments.
 
-    'blacklist' => array(1, 2, 3),
+```php
+'blacklist' => array(1, 2, 3),
+```
 
 Using the `whitelist` option you can define a list of user IDs that will bypass the "Restricted Words" filter.
 
-    'whitelist' => array(1, 2, 3),
+```php
+'whitelist' => array(1, 2, 3),
+```
 
 #### HTML Tags
 
 To enable HTML Tags set `'kses' => true`. By default the script allows all the HTML tags defined in `src/Hazzard/Support/Kses.php` in the `getDefaultAllowedTags` method. You can change the list of allowed tags like this:
 
-    'allowed_tags' => array(
-       'a'   => array(
-            'href' => true
-        ),
-       'b'   => true,
-       'img' => array(
-            'src' => true
-        ),
+```php
+'allowed_tags' => array(
+   'a'   => array(
+        'href' => true
     ),
+   'b'   => true,
+   'img' => array(
+        'src' => true
+    ),
+),
+```
 
 The same thing applies for `allowed_entities`, `allowed_protocols` and `allowed_css`.
 

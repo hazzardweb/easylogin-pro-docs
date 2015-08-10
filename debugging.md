@@ -13,11 +13,15 @@ If you came across an error like "_Oops! Something went wrong._", check your bro
 
 If you get errors about the "Request Origin" request make sure you accept the request in `ajax.php` from where you send it by adding:
 
-    header('Access-Control-Allow-Origin: yourwebsite.com');
-    header('Access-Control-Allow-Origin: www.yourwebsite.com');
+```php
+header('Access-Control-Allow-Origin: yourwebsite.com');
+header('Access-Control-Allow-Origin: www.yourwebsite.com');
+```
 
 ## Error Handling
 
 EasyLogin Pro comes with a <a href="https://github.com/filp/whoops" target="_blank">whoops</a> error handling. However, if you want to disable it open `app/init.php` search for "_Register Custom Exception Handling_" and delete/comment this line:
 
-    $app->startExceptionHandling();
+```php
+$app->startExceptionHandling();
+```

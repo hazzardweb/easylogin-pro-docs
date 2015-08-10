@@ -18,35 +18,49 @@ When you send a message to a user, a conversation will automatically be created 
 
 #### Getting Conversations
 
-    $converstions = Message::getConversations($userId);
+```php
+$converstions = Message::getConversations($userId);
+```
 
 #### Getting  Messages Between Users
 
-    $messages = Message::getConversation($user1Id, $user2Id);
+```php
+$messages = Message::getConversation($user1Id, $user2Id);
+```
 
 `$user1Id` would be the currently authenticated user and `$user2Id` the other user.
 
 #### Counting Unread Messages
 
-    $unread = Message::countUnread($userId);
+```php
+$unread = Message::countUnread($userId);
+```
 
 #### Deleting Messages From A User
 
-    Message::delete($user1Id, $user2Id);
+```php
+Message::delete($user1Id, $user2Id);
+```
 
 `$user1Id` would be the currently authenticated user and `$user2Id` the other user.
 
 #### Deleting All Messages
 
-    Message::delete($userId);
+```php
+Message::delete($userId);
+```
 
 #### Marking All Messages As Read
 
-    Message::markAllAsRead($userId);
+```php
+Message::markAllAsRead($userId);
+```
 
 #### Sending Messages
 
-    Message::send($user1Id, $user2Id, $message);
+```php
+Message::send($user1Id, $user2Id, $message);
+```
 
 `$user1Id` would be the currently authenticated user and `$user2Id` the other user.
 
@@ -60,22 +74,29 @@ The contacts are stored in the `contacts` database table and are like friends if
 
 #### Sending Contact Requests
 
-    Contact::add($user1Id, $user2Id);
+```php
+Contact::add($user1Id, $user2Id);
+```
 
 #### Confirming Contact Requests
 
-    Contact::confirm($user1Id, $user2Id);
+```php
+Contact::confirm($user1Id, $user2Id);
+```
 
 #### Removing Contacts
 
-    Contact::remove($user1Id, $user2Id);
+```php
+Contact::remove($user1Id, $user2Id);
+```
 
 #### Checking If Users are Contacts
 
-    if (Contact::check($user1Id, $user2Id)) 
-    {
-        // Contacts...
-    }
+```php
+if (Contact::check($user1Id, $user2Id)) {
+    // Contacts...
+}
+```
 
 `$user1Id` would be the currently authenticated user and `$user2Id` the other user.
 
