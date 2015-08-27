@@ -5,7 +5,7 @@
 
 ## Server Requirements
 
-EasyLogin Pro will work with versions of PHP as low as `5.3.2`, however some features will not be available.
+EasyLogin Pro will work with versions of PHP as low as `5.3.3`, however some features will not be available.
 
 If you have PHP < `5.3.7` you'll have to disable BCrypt and use MD5 for password hashing.
 
@@ -43,7 +43,7 @@ Copy the files from the `code` directory to your server. <br> By default the scr
 
 Go to phpMyAdmin or your hosting equivalent panel, create a new database (and user) and import `database.sql` found in the `code` directory or in the one you copied earlier.
 
-*If you are using PHP<`5.3.7` you should import `database-php-5.3.2.sql` from the `extra` directory and enable [Basic Hasher](configuration.md#basichasher).
+*If you are using PHP<`5.3.7` you should import `database-php-5.3.3.sql` from the `extra` directory and enable [Basic Hasher](configuration.md#basichasher).
 
 ### 4. Configuration
 
