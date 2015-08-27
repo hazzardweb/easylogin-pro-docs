@@ -105,11 +105,11 @@ Once the app is created go to the __API Keys__ tab and copy __API key__ and __AP
 
 ## LinkedIn
 
-<p class="video-wrapper"><iframe allowfullscreen="1" frameborder="0" src="http://www.youtube.com/embed/NoRSfagg3RU?rel=0&showinfo=0&vq=hd720"></iframe></p>
+Copy the `linkedin` folder from the `extra` directory in the application root. 
 
 Go to <a href="https://developer.linkedin.com" target="_blank">LinkedIn Developers</a>, click on __API Keys__ under your profile name and then click on the __Add New Application__ button. 
 
-Complete the required fields with information about the app, then for __Default Scope__ check __r_fullprofile__, __r_emailaddress__, __r_contactinfo__ and  set the __OAuth 2.0 Redirect URLs__ and __OAuth 1.0 Accept Redirect URL__ to the url that points to the `oauth.php` file, like this: `http://yourwebsite.com/oauth.php?provider=linkedin` and click on the __Add Application__ button.
+Complete the required fields with information about the app, then for __Default Scope__ check __r_fullprofile__, __r_emailaddress__, __r_contactinfo__ and  set the __OAuth 2.0 Redirect URLs__ and __OAuth 1.0 Accept Redirect URL__ to the url that points to the `oauth.php` file, like this: `http://yourwebsite.com/linkedin` and click on the __Add Application__ button.
 
 Once the app is created copy __API Key__ and __Secret Key__ to `app/config/services.php` under the `linkedin` section like this:
 
