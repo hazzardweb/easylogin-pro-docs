@@ -58,7 +58,7 @@ Now you can open the script in your browser.
 To log in use the username `admin` and password `admin`. <br> 
 *Make sure you change the password after you log in the first time.
 
-Next you should continue with the [Configuration](configuration) and [Social Authentication](social-auth) sections.
+Next you should continue with the [Configuration](configuration.md) and [Social Authentication](social-auth.md) sections.
 
 ## Other Examples
 
