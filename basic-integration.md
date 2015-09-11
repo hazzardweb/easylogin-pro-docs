@@ -133,29 +133,14 @@ if (isset($_POST['submit']) && csrf_filter()) {
             </p>
             <!-- Custom fields required for signup -->
             <?php echo UserFields::build('signup') ?>
+
             <!-- Show captcha if enabled -->
             <?php if (Config::get('auth.captcha')): ?>
-                <p class="recaptcha">
-                    <label for="recaptcha_response_field"><?php _e('main.enter_captcha') ?></label>
-                    <div id="recaptcha_widget" class="recaptcha-outer" style="display:none">
-                        <div id="recaptcha_image" class="recaptcha-image"></div>
-                        <div class="recaptcha-controls">
-                            <div><a href="javascript:Recaptcha.reload()" tabindex="-1"><?php _e('main.captcha_reload') ?></a> |</div>
-                            <div class="recaptcha_only_if_image"><a href="javascript:Recaptcha.switch_type('audio')" tabindex="-1"><?php _e('main.captcha_listen') ?></a> |</div>
-                            <div class="recaptcha_only_if_audio"><a href="javascript:Recaptcha.switch_type('image')" tabindex="-1"><?php _e('main.captcha_image') ?></a> |</div>
-                            <div><a href="javascript:Recaptcha.showhelp()" tabindex="-1"><?php _e('main.captcha_help') ?></a></div>
-                        </div>
-                        <input type="text" name="captcha" id="recaptcha_response_field">
-                    </div>
-                    <script type="text/javascript">
-                        var RecaptchaOptions = {
-                            theme : 'custom',
-                            custom_theme_widget: 'recaptcha_widget'
-                        };
-                     </script>
-                    <script src="https://www.google.com/recaptcha/api/challenge?k=<?php echo Config::get('services.recaptcha.public_key') ?>"></script>
+                <p>
+                    <?php display_captcha(); ?>
                 </p>
             <?php endif ?>
+            
             <p>
                 <button type="submit" name="submit"><?php _e('main.signup') ?></button>
             </p>
