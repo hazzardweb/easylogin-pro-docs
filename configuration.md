@@ -7,7 +7,7 @@
 - [Private Messages](#private-messages)
 - [Comments](#comments)
 - [Enable Admin Configuration](#enable-admin-configuration)
-- [PHP < 5.3.7 Basic Hasher](#php-<-5.3.7-basic-hasher)
+- [PHP < 5.3.7 Basic Hasher](#php-<-537-basic-hasher)
 
 ## General
 

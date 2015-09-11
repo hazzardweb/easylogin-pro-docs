@@ -2,8 +2,8 @@
 
 - [Configuration](#configuration)
 - [Authenticating Users](#authenticating-users)
-- [Registering & Activation](#registering-activation)
-- [Password Reminders & Reset](#password-reminders-reset)
+- [Registering & Activation](#registering-&-activation)
+- [Password Reminders & Reset](#password-reminders-&-reset)
 - [Social Authentication](social-auth.md)
 
 ## Configuration
