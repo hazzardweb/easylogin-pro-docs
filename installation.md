@@ -50,7 +50,9 @@ Go to phpMyAdmin or your hosting equivalent panel, create a new database (and us
 First edit `app/config/database.php` and set the database connection details.
 
 Then edit `app/config/app/php` and set `url` to the url where the script is located. For example if you have copied the script files into a directory called "elp" and your website is "http://mywebsite.com" then the `url` should be set to "http://mywebsite.com/elp". <br>
-Set the `key` to a random 32 character string. Use `extra/generate_key.php` to generate a key.
+Set the `key` to a random 32 character string. Click <a href="javascript:generateKey()">here</a> to generate a random key. 
+
+<b id="key"></b>
 
 Make sure to set the permissions to `775` (recursively) for  `app/storage`.
 
@@ -104,3 +106,16 @@ Edit `app/views/emails/reminder.php` and uncomment this line:
 ```
 
 This will change activation and password reminder the links to modals.
+
+<script>
+    function generateKey() {
+        var key  = '',
+            pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        
+        for (var i = 32; i > 0; --i) {
+            key += pool[Math.round(Math.random() * (pool.length - 1))];
+        }
+        
+        document.getElementById('key').innerText = key;
+    }
+</script>
