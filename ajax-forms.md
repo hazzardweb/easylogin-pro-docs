@@ -4,7 +4,7 @@
 
 ## The Basics
 
-#### The HTML Form
+### The HTML Form
 
 Create a HTML form and add the class `ajax-form` to it and set the `action` attribute.
 
@@ -26,7 +26,7 @@ Create a HTML form and add the class `ajax-form` to it and set the `action` attr
 >Warning: In the `<head>` tag make sure you have: <br> `<meta name="csrf-token" content="<?php echo csrf_token() ?>">`.
 
 
-#### The PHP Ajax Function 
+### The PHP Ajax Function 
 
 Edit `ajax.php` and right before the `ajax_login` function add your own function named like this: `ajax_` + the action that you've set above (custom_action in this case).
 
@@ -41,7 +41,7 @@ Now when you submit the form an Ajax request will be sent the the `ajax.php` fil
 
 If you want to send something back, use the `json_message($message, $success = true)` function. The `$message` parameter can be a string or an array and the `$success` parameter indicates if it is a success or error message.
 
-##### Example
+__Example:__
 
 ```php
 function ajax_custom_action() 
@@ -57,7 +57,7 @@ function ajax_custom_action()
 }
 ```
 
-#### The JavaScript Callback
+### The JavaScript Callback
 
 To handle the success response from the server, edit `assets/js/main.js` and at the bottom add a callback like this:
 
