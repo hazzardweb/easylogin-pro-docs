@@ -24,6 +24,7 @@
     - [Validation](validation.md)
     - [Session](session.md)
     - [Cookie](cookie.md)
+    - [Ajax Forms](ajax-forms.md)
 
 - Database
     - [Basic Usage](database.md)
