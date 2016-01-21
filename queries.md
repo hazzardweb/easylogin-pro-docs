@@ -108,6 +108,15 @@ $users = DB::table('users')
                 ->get();
 ```
 
+##### Order Random
+
+```php 
+$users = DB::table('users')
+                ->orderBy('rand()')
+                ->limit(10)
+                ->get();
+```
+
 ##### Offset & Limit
 
 ```php
