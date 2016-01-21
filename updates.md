@@ -1,6 +1,7 @@
 # Updates
 
 - [Git Updates](#git-updates)
+- [Upgrading To 1.2.4 From 1.2.3](#upgrading-to-124-from-123)
 - [Upgrading To 1.2.3 From 1.2](#upgrading-to-123-from-12)
 - [Upgrading To 1.2 From 1.1](#upgrading-to-12-from-11)
 - [Upgrading To 1.1 From 1.0](#upgrading-to-11-from-10)
@@ -9,7 +10,13 @@
 
 You can get the latest updates from [git.hazzardweb.com](http://git.hazzardweb.com). Just log in with your Envato account and you can browse the EasyLogin Pro repository and see all the changes that were made.
 
-If you have any questions use the contact form on [CodeCanyon](http://codecanyon.net/item/easylogin-pro-user-membership-system/8585802) or the e-mail [hazzardweb@gmail.com](mailto:hazzardweb@gmail.com).
+## Upgrading To 1.2.4 From 1.2.3
+- Replace `app/models/Comment.php` (`toArray` method).
+- Replace `src/Hazzard/Support/helpers.php` (`mb_substr` function).
+- Replace `app/models/User.php`.
+- Replace `app/views/modals/settings.php`.
+- Replace `assets/css/comments.css` (`.comment-text`).
+- Replace `src/Hazzard/Database/Query.php` (`compileOrders` method).
 
 ## Upgrading To 1.2.3 From 1.2
 
