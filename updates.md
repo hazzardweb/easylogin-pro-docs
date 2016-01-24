@@ -1,6 +1,7 @@
 # Updates
 
 - [Git Updates](#git-updates)
+- [Upgrading To 1.2.5 From 1.2.4](#upgrading-to-125-from-123)
 - [Upgrading To 1.2.4 From 1.2.3](#upgrading-to-124-from-123)
 - [Upgrading To 1.2.3 From 1.2](#upgrading-to-123-from-12)
 - [Upgrading To 1.2 From 1.1](#upgrading-to-12-from-11)
@@ -9,6 +10,11 @@
 ## Git Updates
 
 You can get the latest updates from [git.hazzardweb.com](http://git.hazzardweb.com). Just log in with your Envato account and you can browse the EasyLogin Pro repository and see all the changes that were made.
+
+## Upgrading To 1.2.5 From 1.2.4
+- Replace `ajax.php` (`ajax_avatar` function).
+- Replace `assets/js/vendor/jquery.imagepicker.js`.
+- Replace `src/Hazzard/Support/ImagePicker.php`.
 
 ## Upgrading To 1.2.4 From 1.2.3
 - Replace `app/models/Comment.php` (`toArray` method).
