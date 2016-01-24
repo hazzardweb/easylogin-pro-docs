@@ -1,7 +1,7 @@
 # Updates
 
 - [Git Updates](#git-updates)
-- [Upgrading To 1.2.5 From 1.2.4](#upgrading-to-125-from-123)
+- [Upgrading To 1.2.5 From 1.2.4](#upgrading-to-125-from-124)
 - [Upgrading To 1.2.4 From 1.2.3](#upgrading-to-124-from-123)
 - [Upgrading To 1.2.3 From 1.2](#upgrading-to-123-from-12)
 - [Upgrading To 1.2 From 1.1](#upgrading-to-12-from-11)
