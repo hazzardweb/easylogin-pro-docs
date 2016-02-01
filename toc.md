@@ -6,7 +6,7 @@
     - [Installation](installation.md)
     - [Configuration](configuration.md)
     - [Social Auth](social-auth.md)
-    - [User Fileds](userfields.md)
+    - [User Fields](userfields.md)
 
 - Integration
     - [Basic Integration](basic-integration.md)
