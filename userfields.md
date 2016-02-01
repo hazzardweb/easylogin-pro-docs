@@ -1,4 +1,4 @@
-# User Fileds
+# User Fields
 
 The User Fields allow to add extra fields to the users.
 
