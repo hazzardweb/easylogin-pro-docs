@@ -7,7 +7,7 @@
 - [Private Messages](#private-messages)
 - [Comments](#comments)
 - [Enable Admin Configuration](#enable-admin-configuration)
-- [PHP < 5.3.7 Basic Hasher](#php-<-537-basic-hasher)
+- [Basic Hasher](#basic-hasher)
 
 ## General
 
@@ -81,7 +81,7 @@ Even if you enable this feature, the script will still look for the configuratio
 
 Also not all configuration options will be available in the Admin Panel for obvious reasons.
 
-## PHP < 5.3.7 Basic Hasher
+## Basic Hasher
 
 First of all if you have PHP < `5.3.7` you should consider upgrading. However, if that's not an option for you, you can disable the `bcrypt` password hashing and enable `md5`.
 
