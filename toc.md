@@ -1,6 +1,6 @@
 - Preface
-    - [Introduction](introduction.md)
-    - [Updates](updates.md)
+    - [Release Notes](changelog.md)
+    - [Upgrade Guide](upgrade.md)
 
 - Getting Started
     - [Installation](installation.md)
@@ -31,6 +31,6 @@
     - [Query Builder](queries.md)
     - [Models](models.md)
 
--
+- Extra
     - [Debugging](debugging.md)
     - [Credits](credits.md)

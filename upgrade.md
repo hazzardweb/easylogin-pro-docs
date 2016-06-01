@@ -1,34 +1,46 @@
-# Updates
+# Upgrade Guide
 
-- [Git Updates](#git-updates)
-- [Upgrading To 1.2.5 From 1.2.4](#upgrading-to-125-from-124)
-- [Upgrading To 1.2.4 From 1.2.3](#upgrading-to-124-from-123)
-- [Upgrading To 1.2.3 From 1.2](#upgrading-to-123-from-12)
+- [Git Changes](#git-changes)
+- [Upgrading To 1.2.7](#upgrading-to-127)
+- [Upgrading To 1.2.6](#upgrading-to-126)
+- [Upgrading To 1.2.5](#upgrading-to-125)
+- [Upgrading To 1.2.4](#upgrading-to-124)
+- [Upgrading To 1.2.3](#upgrading-to-123)
 - [Upgrading To 1.2 From 1.1](#upgrading-to-12-from-11)
 - [Upgrading To 1.1 From 1.0](#upgrading-to-11-from-10)
 
-# NEW 
+## Git Changes
 
-[See the new page for the Upgrade Guide!](upgrade.md)
+You can view the all the changes on [git.hazzardweb.com](http://git.hazzardweb.com) by logging in with your Envato account.
 
-## Git Updates
+## Upgrading To 1.2.7
 
-You can get the latest updates from [git.hazzardweb.com](http://git.hazzardweb.com). Just log in with your Envato account and you can browse the EasyLogin Pro repository and see all the changes that were made.
+- Replace `ajax.php`
+- Replace `src/Hazzard/Support/DataTables.php`
+- Replace `src/Hazzard\Messages/Message.php`
+- Replace `assets/js/main.js`
+- Replace `assets/js/easylogin.js`
 
-## Upgrading To 1.2.5 From 1.2.4
-- Replace `ajax.php` (`ajax_avatar` function).
-- Replace `assets/js/vendor/jquery.imagepicker.js`.
-- Replace `src/Hazzard/Support/ImagePicker.php`.
+## Upgrading To 1.2.6
 
-## Upgrading To 1.2.4 From 1.2.3
-- Replace `app/models/Comment.php` (`toArray` method).
-- Replace `src/Hazzard/Support/helpers.php` (`mb_substr` function).
-- Replace `app/models/User.php`.
-- Replace `app/views/modals/settings.php`.
-- Replace `assets/css/comments.css` (`.comment-text`).
-- Replace `src/Hazzard/Database/Query.php` (`compileOrders` method).
+- Replace `src/Hazzard/Support/DataTables.php`
 
-## Upgrading To 1.2.3 From 1.2
+## Upgrading To 1.2.5
+
+- Replace `ajax.php` (`ajax_avatar` function)
+- Replace `assets/js/vendor/jquery.imagepicker.js`
+- Replace `src/Hazzard/Support/ImagePicker.php`
+
+## Upgrading To 1.2.4
+
+- Replace `app/models/Comment.php` (`toArray` method)
+- Replace `src/Hazzard/Support/helpers.php` (`mb_substr` function)
+- Replace `app/models/User.php`
+- Replace `app/views/modals/settings.php`
+- Replace `assets/css/comments.css` (`.comment-text`)
+- Replace `src/Hazzard/Database/Query.php` (`compileOrders` method)
+
+## Upgrading To 1.2.3
 
 This update brings some OAuth fixes for Facebook and Linkedin as well as few other minor fixes and tweaks.
 
