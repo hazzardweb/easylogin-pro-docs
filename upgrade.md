@@ -16,10 +16,13 @@ You can view the all the changes on [git.hazzardweb.com](http://git.hazzardweb.c
 ## Upgrading To 1.2.7
 
 - Replace `ajax.php`
+- Replace `src/Hazzard/Support/helpers.php`
+- Replace `src/Hazzard/Support/Recaptcha.php`
 - Replace `src/Hazzard/Support/DataTables.php`
 - Replace `src/Hazzard\Messages/Message.php`
 - Replace `assets/js/main.js`
 - Replace `assets/js/easylogin.js`
+- If you are using the versions with JavaScript (default, inline or basic-ajax), replace `display_captcha()` with `display_captcha_tag()` in `signup.php`, `activation.php` and `reminder.php`.
 
 ## Upgrading To 1.2.6
 
