@@ -3,6 +3,7 @@
 - [Selects](#selects)
 - [Joins](#joins)
 - [Aggregates](#aggregates)
+- [Raw Expressions](#raw-expressions)
 - [Inserts](#inserts)
 - [Updates](#updates)
 - [Deletes](#deletes)
@@ -100,11 +101,13 @@ The query above will produce the following SQL:
 select * from users where username = 'john' or (id > 10 and status = '1')
 ```
 
-##### Order By
+##### Order By, Group By, And Having
   
 ```php 
 $users = DB::table('users')
-                ->orderBy('joined', 'desc')
+                ->orderBy('username', 'desc')
+                ->groupBy('role_id')
+                ->having('role_id', '>', 1)
                 ->get();
 ```
 
@@ -160,6 +163,20 @@ $id = DB::table('users')->min('id');
 $id = DB::table('users')->avg('id');
 
 $id = DB::table('users')->sum('id');
+```
+
+## Raw Expressions
+
+Sometimes you may need to use a raw expression in a query. These expressions will be injected into the query as strings, so be careful not to create any SQL injection points! To create a raw expression, you may use the `DB::raw` method:
+
+##### Using A Raw Expression
+
+```php
+$users = DB::table('users')
+             ->select(DB::raw('count(*) as user_count, status'))
+             ->where('status', '<>', 1)
+             ->groupBy('status')
+             ->get();
 ```
 
 ## Inserts
