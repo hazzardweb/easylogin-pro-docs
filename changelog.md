@@ -1,5 +1,18 @@
 # Release Notes
 
+## v1.2.8 - 2016-06-15
+
+### Fixed
+
+- Fixed email body when sending a message (`ajax.php@ajax_send_message`)
+- [MySQL 5.6.2x] Change the default value of the `updated` column (`database.sql`)
+- [MySQL 5.6.2x] Make password null by default (`database.sql`)
+
+### Added
+
+- Added [DB::groupBy](queries.md#order-by), [DB::having](queries.md#order-by) and [DB:raw()](queries.md#raw-expressions)
+- Added LinkedIn cancel redirect (`extra/linkedin/index.php`)
+
 ## v1.2.7 - 2016-06-07
 
 ### Fixed

@@ -1,6 +1,7 @@
 # Upgrade Guide
 
 - [Git Changes](#git-changes)
+- [Upgrading To 1.2.8](#upgrading-to-128)
 - [Upgrading To 1.2.7](#upgrading-to-127)
 - [Upgrading To 1.2.6](#upgrading-to-126)
 - [Upgrading To 1.2.5](#upgrading-to-125)
@@ -12,6 +13,13 @@
 ## Git Changes
 
 You can view the all the changes on [git.hazzardweb.com](http://git.hazzardweb.com) by logging in with your Envato account.
+
+## Upgrading To 1.2.8
+
+- Replace `ajax.php@ajax_send_message`
+- Replace `extra/linkedin/index.php`
+- Add `src/Hazzard/Database/Expression.php`
+- Replace `src/Hazzard/Database/Connection.php` and `Query.php`
 
 ## Upgrading To 1.2.7
 
