@@ -10,7 +10,7 @@
 
 ### Added
 
-- Added [DB::groupBy](queries.md#order-by), [DB::having](queries.md#order-by) and [DB:raw()](queries.md#raw-expressions)
+- Added [DB::groupBy](queries.md#order-by,-group-by,-and-having), [DB::having](queries.md#order-by,-group-by,-and-having) and [DB:raw()](queries.md#raw-expressions)
 - Added LinkedIn cancel redirect (`extra/linkedin/index.php`)
 
 ## v1.2.7 - 2016-06-07
