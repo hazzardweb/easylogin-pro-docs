@@ -1,5 +1,17 @@
 # Release Notes
 
+## v1.2.9 - 2016-06-27
+
+### Fixed
+
+- Fixed LinkedIn disconnect redirect
+- Fixed Twitter avatar url to use https
+- Fixed admin users table when username is disabled
+
+### Added
+
+- Added `role_id` option to the [User Fields](userfields.md) that allows to specify the role id (or array of role ids) for which the field is displayed
+
 ## v1.2.8 - 2016-06-15
 
 ### Fixed

@@ -1,6 +1,7 @@
 # Upgrade Guide
 
 - [Git Changes](#git-changes)
+- [Upgrading To 1.2.9](#upgrading-to-129)
 - [Upgrading To 1.2.8](#upgrading-to-128)
 - [Upgrading To 1.2.7](#upgrading-to-127)
 - [Upgrading To 1.2.6](#upgrading-to-126)
@@ -13,6 +14,13 @@
 ## Git Changes
 
 You can view the all the changes on [git.hazzardweb.com](http://git.hazzardweb.com) by logging in with your Envato account.
+
+## Upgrading To 1.2.9
+
+- Replace `oauth.php`
+- Replace `app/views/admin/users.php`
+- Replace `src/OAuth/UserData/Extractor/Twitter.php`
+- Replace `src/Hazzard/User/Fields.php` and `FieldsServiceProvider.php`
 
 ## Upgrading To 1.2.8
 

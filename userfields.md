@@ -27,6 +27,7 @@ The key (_first_name_ in the example) must be a unique for each field.
 - `content_after` - some HTML content to be displayed after the field.
 - `validation` - the list of validation rules. See the [Available Validation Rules](validation.md#available-validation-rules).
 - `assignment` - where will the field be displayed, in the signup form (`'signup'`), user settings (`'user'`) or in the Admin Panel (`'admin'`).
+- `role_id` - the role id (or array of role ids) for which the field is displayed.
 
 To retrive the fields from database use the [User](user.md) class or the [Usermeta](usermeta.md) class.
 
