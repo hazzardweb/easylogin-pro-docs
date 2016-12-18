@@ -1,5 +1,11 @@
 # Release Notes
 
+## v1.2.10 - 2016-12-18
+
+### Fixed
+
+- Fixed deprecated Facebook field.
+
 ## v1.2.9 - 2016-06-27
 
 ### Fixed
@@ -85,7 +91,7 @@
 
 - Fixed captcha keys
 - Fixed comment selector
- 
+
 ## v1.2.0 - 2015-02-17
 
 ### Added
@@ -106,7 +112,7 @@
 ### Removed
 
 - Removed Geoplugin
- 
+
 ## v1.1.4 - 2015-01-14
 
 ### Fixed
@@ -121,7 +127,7 @@
 
 - Fixed language switch issue.
 - Fixed 2 bugs for PHP<5.4.
- 
+
 ## v1.1.2 - 2014-11-10
 
 ### Fixed
@@ -133,7 +139,7 @@
 - Fixed bug where the user is not found.
 - Fixed admin reply button link.
 - Fixed check for `getallheaders()`.
- 
+
 ## v1.1.0 - 2014-10-26
 
 ### Added
@@ -147,14 +153,14 @@
 - Reworked ajax action handling.
 - Improvements and bug fixes.
 - Improved documentation.
- 
+
 ## v1.0.2 - 2014-09-03
 
 ### Fixed
 
 - Fixed JavaScript signup callback.
 - Fixed ValidationServiceProvider scope.
- 
+
 ## v1.0.1 - 2014-08-28
 
 ### Fixed

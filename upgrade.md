@@ -1,6 +1,7 @@
 # Upgrade Guide
 
 - [Git Changes](#git-changes)
+- [Upgrading To 1.2.10](#upgrading-to-1210)
 - [Upgrading To 1.2.9](#upgrading-to-129)
 - [Upgrading To 1.2.8](#upgrading-to-128)
 - [Upgrading To 1.2.7](#upgrading-to-127)
@@ -14,6 +15,10 @@
 ## Git Changes
 
 You can view the all the changes on [git.hazzardweb.com](http://git.hazzardweb.com) by logging in with your Envato account.
+
+## Upgrading To 1.2.10
+
+- Replace `src/OAuth/UserData/Extractor/Facebook.php`. This is only required if your Facebook app is >= 2.8.
 
 ## Upgrading To 1.2.9
 
@@ -73,10 +78,10 @@ Visit [git.hazzardweb.com](http://git.hazzardweb.com) and browse the `easylogin-
 
 ## Upgrading To 1.2 From 1.1
 
-The `1.2` upgrade consists mostly in some bug fixes (nothing related to security) and cleaning up few things. It also brings the new reCAPTCHA and few things here and there. 
+The `1.2` upgrade consists mostly in some bug fixes (nothing related to security) and cleaning up few things. It also brings the new reCAPTCHA and few things here and there.
 
 Since there are a lot of small changes a lot of files if you want to upgrade from `1.1.4` you'll have to go to [git.hazzardweb.com](http://git.hazzardweb.com), log in with your Purchase Code from CodeCanyon and then go to the __Commits__ tab scroll down, click on the __Older__ button until you find this commit *Fixed comment moderation option* made on 13/01/2015 21:52:23. From there go up and see what files have changed and change yours too. Also make sure to replace the `vendor` directory because all packages have been updated.
-  
+
 ## Upgrading To 1.1 From 1.0
 
 The `1.1` update brings the comment system, some bug fixes (mostly for PHP<5.4) and some other changes. <br> If you don't want the comment system and you don't have any issues you don't have to upgrade.
