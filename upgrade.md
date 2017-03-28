@@ -1,6 +1,7 @@
 # Upgrade Guide
 
 - [Git Changes](#git-changes)
+- [Upgrading To 1.2.11](#upgrading-to-1211)
 - [Upgrading To 1.2.10](#upgrading-to-1210)
 - [Upgrading To 1.2.9](#upgrading-to-129)
 - [Upgrading To 1.2.8](#upgrading-to-128)
@@ -15,6 +16,12 @@
 ## Git Changes
 
 You can view the all the changes on [git.hazzardweb.com](http://git.hazzardweb.com) by logging in with your Envato account.
+
+## Upgrading To 1.2.11
+
+- Copy `extra/facebook-fix/Facebook.php` to `vendor/lusitanian/oauth/src/OAuth/OAuth2/Service`.
+- Replace `src/Hazzard/Support/helpers.php @ csrf_filter`
+- PHP 7.1 only: replace `error_reporting(-1);` with `error_reporting(E_ALL & ~E_DEPRECATED);` in `app/init.php`.
 
 ## Upgrading To 1.2.10
 
