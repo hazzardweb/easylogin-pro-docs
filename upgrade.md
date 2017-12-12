@@ -60,7 +60,12 @@ Only if you want to add Spotify as an oauth provider.
 
 - Replace `src/Hazzard/Database/Query.php`
 - In `app/config/database.php` change `charset` to `utf8mb4` and `collation` to `utf8mb4_unicode_ci`
-- To enable `utf8mb4` for your old database follow [this guide](https://mathiasbynens.be/notes/mysql-utf8mb4). You don't have to upgrade all columns, just those where you want to support the new charset.
+
+To enable `utf8mb4` for your old database dump your tables and data into a `.sql` file then edit it and replace `CHARSET=utf8` with `CHARSET=utf8mb4`. 
+
+Now run `ALTER DATABASE your_database_name CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;` to convert the database and import back the `.sql` file. 
+
+Alternatively, you can follow [this guide](https://mathiasbynens.be/notes/mysql-utf8mb4) and only change the charset for the tables and collumns you want.
 
 #### Misc
 
