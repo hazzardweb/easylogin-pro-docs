@@ -1,6 +1,7 @@
 # Upgrade Guide
 
 - [Git Changes](#git-changes)
+- [Upgrading To 1.3.0](#upgrading-to-130)
 - [Upgrading To 1.2.11](#upgrading-to-1211)
 - [Upgrading To 1.2.10](#upgrading-to-1210)
 - [Upgrading To 1.2.9](#upgrading-to-129)
@@ -10,12 +11,62 @@
 - [Upgrading To 1.2.5](#upgrading-to-125)
 - [Upgrading To 1.2.4](#upgrading-to-124)
 - [Upgrading To 1.2.3](#upgrading-to-123)
-- [Upgrading To 1.2 From 1.1](#upgrading-to-12-from-11)
-- [Upgrading To 1.1 From 1.0](#upgrading-to-11-from-10)
+- [Upgrading To 1.2](#upgrading-to-12)
+- [Upgrading To 1.1](#upgrading-to-11)
 
 ## Git Changes
 
-You can view the all the changes on [git.hazzardweb.com](http://git.hazzardweb.com) by logging in with your Envato account.
+You can view the all the changes on [git.hazzardweb.com](http://git.hazzardweb.com).
+
+## Upgrading To 1.3.0
+
+#### Updating Dependencies
+
+- Replace `vendor` and `composer.json`
+- For PHP < 5.4 copy and replace the contents from the `extra/php53-compat` to the root directory of the script
+
+#### Encryption
+
+- Replace `src/Hazzard/Encryption` and `app/init.php`
+
+#### Mail
+
+- Replace `src/Hazzard/Mail`, `app/views/admin/options-services.php` and `app/views/admin/options-mail.php`
+- Add `'sparkpost' => array('secret' => ''),` in `app/config/services.php`
+
+#### Exception Handler
+
+- Replace `src/Hazzard/Exception/Handler.php` and `app/init.php`
+
+#### Comments
+
+- Delete `app/config/smiles.php`
+- Replace `app/views/comments.php`
+- Add `src/Hazzard/Formatting` directory
+- Replace `src/Hazzard/Comments/Comments.php`
+- Replace `assets/js/comments.js` and `assets/css/comments.css`
+
+#### OAuth
+
+Only if you want to add Spotify as an oauth provider.
+
+- Add `src/OAuth/UserData/Extractor/Spotify.php`
+- Add `.connect.spotify{background: #2ebd59;}` in `assets/css/main.css`
+- Add `'spotify' => array('user-read-email', 'user-read-birthdate'),` in `oauth.php` under `$scopes`
+- Add `'spotify' => array('id' => '', 'secret' => ''),` in `app/config/services.php`
+- Add `// 'spotify' => 'Spotify',` in `app/config/auth.php` under the `providers` array
+
+#### Database 
+
+- Replace `src/Hazzard/Database/Query.php`
+- In `app/config/database.php` change `charset` to `utf8mb4` and `collation` to `utf8mb4_unicode_ci`
+- To enable `utf8mb4` for your old database follow [this guide](https://mathiasbynens.be/notes/mysql-utf8mb4). You don't have to upgrade all columns, just those where you want to support the new charset.
+
+#### Misc
+
+- Replace `src/Hazzard/Support/Str.php`
+- Replace `src/Hazzard/Support/ImagePicker.php`
+- Replace `src/Hazzard/Validation/Validator.php`
 
 ## Upgrading To 1.2.11
 
@@ -83,13 +134,13 @@ Visit [git.hazzardweb.com](http://git.hazzardweb.com) and browse the `easylogin-
 - Replace the `src/OAuth` directory.
 - (Optional) Replace the `vendor` directory. If you are using Mailgun or Mandrill [install](mail.md#api-drivers) the API drivers again.
 
-## Upgrading To 1.2 From 1.1
+## Upgrading To 1.2
 
 The `1.2` upgrade consists mostly in some bug fixes (nothing related to security) and cleaning up few things. It also brings the new reCAPTCHA and few things here and there.
 
 Since there are a lot of small changes a lot of files if you want to upgrade from `1.1.4` you'll have to go to [git.hazzardweb.com](http://git.hazzardweb.com), log in with your Purchase Code from CodeCanyon and then go to the __Commits__ tab scroll down, click on the __Older__ button until you find this commit *Fixed comment moderation option* made on 13/01/2015 21:52:23. From there go up and see what files have changed and change yours too. Also make sure to replace the `vendor` directory because all packages have been updated.
 
-## Upgrading To 1.1 From 1.0
+## Upgrading To 1.1
 
 The `1.1` update brings the comment system, some bug fixes (mostly for PHP<5.4) and some other changes. <br> If you don't want the comment system and you don't have any issues you don't have to upgrade.
 

@@ -38,7 +38,7 @@ Using the `whitelist` option you can define a list of user IDs that will bypass 
 
 #### HTML Tags
 
-To enable HTML Tags set `'kses' => true`. By default the script allows all the HTML tags defined in `src/Hazzard/Support/Kses.php` in the `getDefaultAllowedTags` method. You can change the list of allowed tags like this:
+To enable HTML Tags set `'kses' => true`. By default the script allows all the HTML tags defined in `src/Hazzard/Formatting/Kses.php` in the `getDefaultAllowedTags` method. You can change the list of allowed tags like this:
 
 ```php
 'allowed_tags' => array(

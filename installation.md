@@ -5,20 +5,13 @@
 
 ## Server Requirements
 
-EasyLogin Pro will work with versions of PHP as low as `5.3.3`, however some features will not be available.
-
-If you have PHP < `5.3.7` you'll have to disable BCrypt and use MD5 for password hashing.
-
-The minimum recomended version of PHP is `5.3.7` or `5.4` if you want to enable Mailgun and Mandrill.
-
-Beside that you will also need to have some common PHP extensions:
-
-- MCrypt
-- PDO MYSQL
-- OpenSSL
-- GD 
-- Exif _(optional)_
-- Multibyte String _(optional)_
+- PHP >= 5.3.7 or >= 5.4 for the [mail api drivers](mail.md#api-drivers).
+- MySQL >= 5.5.15
+- PDO PHP Extension
+- OpenSSL PHP Extension
+- GD PHP Extension
+- Multibyte String PHP Extension
+- Exif PHP Extension _(optional)_
 - Internationalization _(optional)_
 
 To make sure you have everything installed run `extra/php_check.php` in your browser to see the results.
@@ -39,25 +32,25 @@ Copy the files from the `code` directory to your server. <br> By default the scr
 
 *Make sure the `uploads` directory has `0777` permission.
 
+*For PHP < 5.4 copy and replace the contents from the `extra/php53-compat` to the root directory of the script.
+
 ### 3. Create a database & import the SQL file
 
-Go to phpMyAdmin or your hosting equivalent panel, create a new database (and user) and import `database.sql` found in the `code` directory or in the one you copied earlier.
-
-*If you are using PHP<`5.3.7` you should import `database-php-5.3.3.sql` from the `extra` directory and enable [Basic Hasher](configuration.md#basic-hasher).
+Open a database client (phpMyAdmin, etc.), create a new database (and user) and import `database.sql` found in the `code` directory or in the one you copied earlier.
 
 ### 4. Configuration
 
 First edit `app/config/database.php` and set the database connection details.
 
 Then edit `app/config/app/php` and set `url` to the url where the script is located. For example if you have copied the script files into a directory called "elp" and your website is "http://mywebsite.com" then the `url` should be set to "http://mywebsite.com/elp". <br>
-Set the `key` to a random 32 character string. Click <a href="javascript:generateKey()">here</a> to generate a random key. 
+Set the `key` to a random 32 character string. Click <a href="javascript:generateKey()">here</a> to generate a random key.
 
 <b id="key"></b>
 
 Make sure to set the permissions to `775` (recursively) for  `app/storage`.
 
 Now you can open the script in your browser.
-To log in use the username `admin` and password `admin`. <br> 
+To log in use the username `admin` and password `admin`. <br>
 *Make sure you change the password after you log in the first time.
 
 Next you should continue with the [Configuration](configuration.md) and [Social Authentication](social-auth.md) sections.
@@ -76,7 +69,7 @@ Edit `app/views/comments.php`, find this line
 <!-- <?php _e('comments.logged_in', array('attrs' => 'href="login.php"')) ?> -->
 ```
 
-remove the comments (`<!--` and `-->`), and make sure you comment the next line. 
+remove the comments (`<!--` and `-->`), and make sure you comment the next line.
 
 Then edit `app/views/header.php` find these lines:
 
@@ -111,11 +104,11 @@ This will change activation and password reminder the links to modals.
     function generateKey() {
         var key  = '',
             pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        
+
         for (var i = 32; i > 0; --i) {
             key += pool[Math.round(Math.random() * (pool.length - 1))];
         }
-        
+
         document.getElementById('key').innerText = key;
     }
 </script>

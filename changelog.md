@@ -1,5 +1,22 @@
 # Release Notes
 
+## v1.3.0 (2017-12-12)
+
+- Added PHP 7.2 compatibility
+- Added Spotify oauth provider
+- Added [Twemoji](http://twitter.github.io/twemoji) for comments
+- Updated minimum PHP to 5.3.7
+- Updated mail drivers with support for [SparkPost](https://www.sparkpost.com)
+- Updated exception handler
+- Changed database charset to `utf8mb4`
+- Switched to OpenSSL encryption
+- Added `Hazzard\Formatting` classes
+- Removed `Hazzard\Support\Kses`
+- Removed `app/config/smilies.php`
+- Removed `make_clickable`, `convert_smilies` `mb_strlen` and `mb_substr`
+- Fixed value cast in ImagePicker
+- Fixed db query `pluck` method
+
 ## v1.2.11 - 2017-03-28
 
 - Fixed Facebook OAauth.

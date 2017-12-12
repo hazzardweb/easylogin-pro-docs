@@ -7,7 +7,6 @@
 - [Private Messages](#private-messages)
 - [Comments](#comments)
 - [Enable Admin Configuration](#enable-admin-configuration)
-- [Basic Hasher](#basic-hasher)
 
 ## General
 
@@ -59,9 +58,14 @@ The options for Private Messages are stored in `app/config/pms.php`. The options
 The `webmaster` must be set to the ID of the admin. By default is set `1`, the ID of the admin account created by the script.
 
 ## Comments
-The options for Comments are stored in `app/config/comments.php`. The options allow you to enable manual moderation, add restricted works, add blacklisted/whitelisted users, set how many comments you want to display per page, enable smilies* and other settings.
+The options for Comments are stored in `app/config/comments.php`. The options allow you to enable manual moderation, add restricted works, add blacklisted/whitelisted users, set how many comments you want to display per page and other settings.
 
-*If you enable smilies for the comments you have to also define the smilies images in `app/config/smilies.php`.  By default the script does not have the actual images included. You can use your own images or buy [these](http://graphicriver.net/item/matte-motes-emoticon-set/33923).
+The script has with support for [unicode emoji](https://unicode.org/emoji/charts/full-emoji-list.html) but you can also add short codes:
+
+```php
+// app/init.php
+Hazzard\Formatting\Emoji::add(':)', '1F600'); // U+1F600
+```
 
 ## Enable Admin Configuration
 
@@ -80,26 +84,3 @@ Now if you go to the Admin Panel `admin.php` you'll see a new section for Settin
 Even if you enable this feature, the script will still look for the configuration options in the configuration files if the options does not exists in the database, basically will merge them.
 
 Also not all configuration options will be available in the Admin Panel for obvious reasons.
-
-## Basic Hasher
-
-First of all if you have PHP < `5.3.7` you should consider upgrading. However, if that's not an option for you, you can disable the `bcrypt` password hashing and enable `md5`.
-
-Edit `src/Hazzard/Hashing/HashServiceProvider.php` and in the `register` method comment the first part and uncomment the last one like this:
-
-```php
-public function register()
-{
-    //$this->app->bindShared('hash', function($app) {
-    //    return new BcryptHasher;
-    //});
-
-    // Use this if you don't have BCRYPT on your server.
-    $this->app->bindShared('hash', function($app) {
-        // "md5", "sha256", "haval160,4" etc.
-        return new BasicHasher('md5');
-    });
-}
-```
-
->Warning: The `md5` password hasher is considered to be the weakest one. Use it at your own risks. 

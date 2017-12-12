@@ -36,14 +36,11 @@ If you don't have an e-mail on your server you can even use a Gmail account.
 
 ### API Drivers
 
-There are included drivers for the <a href="http://www.mailgun.com/" target="_blank">Mailgun</a> and <a href="https://www.mandrill.com/">Mandrill</a>. Both drivers require PHP>=`5.4`. 
-First you have to install them by copying the contents from the  `extra/mailgun-mandrill-api` directory to the root directory of the script. Next, follow the instructions for each one.
+There [Mailgun](https://www.mailgun.com), [Mandrill](https://www.mandrill.com) and [SparkPost](https://www.sparkpost.com) api drivers require PHP >= `5.4`.
 
 #### Mailgun
 
-To use the Mailgun driver, set the `driver` option to `mailgun` in `app/config/mail.php`. Next, go to the <a href="https://mailgun.com/cp" target="_blank">Mailgun CP</a>, click on the __Add Your Domain__ button and add your website domain name.
-
-Once created go back to the __Mailgun CP__ and copy the __API Key__ and the domain you just created to `app/config/services.php` under the `mailgun` section like this:
+Copy your [Mailgun](https://www.mailgun.com) __API Key__ and __Domain__ to `app/config/services.php` under the `mailgun` section:
 
 ```php
 'mailgun' => array(
@@ -54,13 +51,21 @@ Once created go back to the __Mailgun CP__ and copy the __API Key__ and the doma
 
 #### Mandrill
 
-To use the Mandrill driver, set the `driver` option to `mandrill` in `app/config/mail.php`. Next, go to the <a href="https://mandrillapp.com" target="_blank">Mandrill App</a>, click on the __Get API Keys__ button then on the __+ Add API Key__ button.
-
-Once created copy the __API Key__ to `app/config/services.php` under the `mandrill` section like this:
+Copy your [Mandrill](https://www.mandrill.com) __API Key__ to `app/config/services.php` under the `mandrill` section:
 
 ```php
 'mandrill' => array(
     'secret' => 'your-mandrill-key',
+),
+```
+
+#### SparkPost
+
+Copy your [SparkPost](https://www.sparkpost.com) __API Key__ to `app/config/services.php` under the `sparkpost` section:
+
+```php
+'sparkpost' => array(
+    'secret' => 'your-sparkpost-key',
 ),
 ```
 
