@@ -1,6 +1,7 @@
 # Upgrade Guide
 
 - [Git Changes](#git-changes)
+- [Upgrading To 1.3.1](#upgrading-to-131)
 - [Upgrading To 1.3.0](#upgrading-to-130)
 - [Upgrading To 1.2.11](#upgrading-to-1211)
 - [Upgrading To 1.2.10](#upgrading-to-1210)
