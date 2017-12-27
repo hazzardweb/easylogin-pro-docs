@@ -18,6 +18,10 @@
 
 You can view the all the changes on [git.hazzardweb.com](http://git.hazzardweb.com).
 
+## Upgrading To 1.3.1
+
+Replace the `vendor` directory.
+
 ## Upgrading To 1.3.0
 
 #### Updating Dependencies
@@ -56,14 +60,14 @@ Only if you want to add Spotify as an oauth provider.
 - Add `'spotify' => array('id' => '', 'secret' => ''),` in `app/config/services.php`
 - Add `// 'spotify' => 'Spotify',` in `app/config/auth.php` under the `providers` array
 
-#### Database 
+#### Database
 
 - Replace `src/Hazzard/Database/Query.php`
 - In `app/config/database.php` change `charset` to `utf8mb4` and `collation` to `utf8mb4_unicode_ci`
 
-To enable `utf8mb4` for your old database dump your tables and data into a `.sql` file then edit it and replace `CHARSET=utf8` with `CHARSET=utf8mb4`. 
+To enable `utf8mb4` for your old database dump your tables and data into a `.sql` file then edit it and replace `CHARSET=utf8` with `CHARSET=utf8mb4`.
 
-Now run `ALTER DATABASE your_database_name CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;` to convert the database and import back the `.sql` file. 
+Now run `ALTER DATABASE your_database_name CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;` to convert the database and import back the `.sql` file.
 
 Alternatively, you can follow [this guide](https://mathiasbynens.be/notes/mysql-utf8mb4) and only change the charset for the tables and collumns you want.
 

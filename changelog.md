@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.3.1 (2017-12-27)
+
+- Fixed dependencies
+
 ## v1.3.0 (2017-12-12)
 
 - Added PHP 7.2 compatibility
