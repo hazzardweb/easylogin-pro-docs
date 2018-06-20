@@ -7,9 +7,11 @@ To enable error reporting make sure the `debug` mode is set to `true` in `app/co
 
 ## Ajax Errors
 
-If you came across an error like "_Oops! Something went wrong._", check your browser's __Console__ and __Network__ tabs for more information.
+If you get an unexpected error (_Oops! Something went wrong._), you can use browser dev tools to see the errors and response from the server.
 
-<p class="video-wrapper"><iframe src="https://www.screenr.com/embed/27ON" width="650" height="396" frameborder="0"></iframe></p>
+In Google Chrome, right-click and select __Inspect__, or use the keyboard shortcut: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (or <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>I</kbd> on Mac).
+
+Navigate to the __Console__ tab to see potential JavaScript errors and the __Network__ tab to see the requests/responses when you upload files (make sure _Record Network_ Log is on). 
 
 If you get errors about the "Request Origin" request make sure you accept the request in `ajax.php` from where you send it by adding:
 
