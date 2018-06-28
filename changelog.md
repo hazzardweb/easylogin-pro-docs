@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.3.2 (2018-06-28)
+
+- Added `hash_equals` compatibility for PHP < 5.6.
+
 ## v1.3.1 (2017-12-27)
 
 - Fixed dependencies
