@@ -1,5 +1,11 @@
 # Release Notes
 
+## v1.3.3 (2018-06-29)
+
+- Fixed Facebook deprecated scopes.
+- Fixed webcam deprecation.
+- Fixed reCAPTCHA by using cURL. The PHP cURL extension is now required if you use reCAPTCHA.
+
 ## v1.3.2 (2018-06-28)
 
 - Added `hash_equals` compatibility for PHP < 5.6.

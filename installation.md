@@ -10,6 +10,7 @@
 - PDO PHP Extension
 - OpenSSL PHP Extension
 - GD PHP Extension
+- cURL PHP Extension
 - Multibyte String PHP Extension
 - Exif PHP Extension _(optional)_
 - Internationalization _(optional)_
