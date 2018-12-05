@@ -12,7 +12,7 @@ The configuration options for comments are stored in `app/config/comments.php`.
 
 #### Smilies
 
-To enable the smilies set `'use_smilies' => true`. You have to also define the smilies images in `app/config/smilies.php`. By default the script does not have the actual images included. You can use your own images or buy [these](http://graphicriver.net/item/matte-motes-emoticon-set/33923)
+To enable the smilies set `'use_smilies' => true`.
 
 #### Restricted Words
 
