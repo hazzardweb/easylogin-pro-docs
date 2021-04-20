@@ -1,6 +1,7 @@
 # Upgrade Guide
 
 - [Git Changes](#git-changes)
+- [Upgrading To 1.3.4](#upgrading-to-134)
 - [Upgrading To 1.3.3](#upgrading-to-133)
 - [Upgrading To 1.3.2](#upgrading-to-132)
 - [Upgrading To 1.3.1](#upgrading-to-131)
@@ -20,6 +21,14 @@
 ## Git Changes
 
 You can view the all the changes on [git.hazzardweb.com](http://git.hazzardweb.com).
+
+
+## Upgrading To 1.3.4
+
+- Replace `src/Hazzard/Support/helpers.php`
+- Replace `src/Hazzard/Events/Dispatcher.php`
+- Replace `src/Hazzard/Support/ImagePicker.php`
+- Replace `assets/js/vendor/jquery.imgpicker.js`
 
 ## Upgrading To 1.3.3
 

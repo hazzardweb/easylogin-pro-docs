@@ -1,5 +1,11 @@
 # Release Notes
 
+## v1.3.4 (2021-04-20)
+
+- Compatibility with PHP 8.
+- Upgrade camera api.
+- Social authentication no longer works due to third-party api changes. You may still be able to use it if you have the api keys from an old application.
+
 ## v1.3.3 (2018-06-29)
 
 - Fixed Facebook deprecated scopes.
