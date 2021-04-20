@@ -5,7 +5,6 @@
 - Getting Started
     - [Installation](installation.md)
     - [Configuration](configuration.md)
-    - [Social Auth](social-auth.md)
     - [User Fields](userfields.md)
 
 - Integration

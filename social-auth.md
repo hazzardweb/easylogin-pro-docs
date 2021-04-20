@@ -1,5 +1,7 @@
 # Social Authentication
 
+>Attention: Social authentication no longer works due to third-party api changes.
+
 - [Quickstart](#quickstart)
 - [Facebook](#facebook)
 - [Google](#google)
